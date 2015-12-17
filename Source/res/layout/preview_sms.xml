@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#E0FFFF"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+        
+        
+        <EditText 
+            android:id="@+id/sms_message"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:lines="10"
+            />
+
+        <EditText
+            android:id="@+id/phone_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_below="@+id/sms_message"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/guest_phone_number"
+            android:inputType="phone"
+            android:textSize="10sp" />
+        
+        <Button 
+            android:id="@+id/send_button"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+             android:layout_below="@+id/phone_number"
+            android:layout_marginTop="20dp"
+            android:onClick="onClick"
+            android:text="@string/send"/>
+        <Button 
+            android:id="@+id/cancel_button"
+            android:layout_width="fill_parent"
+            android:layout_below="@+id/send_button"
+            android:layout_height="wrap_content"
+            android:onClick="onClick"
+            android:text="@string/cancel"/>
+    </RelativeLayout>
+    
+
+</ScrollView>

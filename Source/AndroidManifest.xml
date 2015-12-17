@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="niranjan.sarthak.samarth"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <permission
+        android:name="niranjan.sarthak.samarth.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="niranjan.sarthak.samarth.permission.MAPS_RECEIVE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+	
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/help"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+     <!--    android:configChanges = --> 
+     
+      
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="AIzaSyAeaID5C6DnLDvDoThv73m56OAnBTWm3R4" />
+
+        <activity
+            android:name="niranjan.sarthak.samarth.MainActivity"
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.Settings"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.updateEM"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.UpdateUser"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.Registration"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.BloodBank"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.PreviewSMS"
+            android:configChanges="orientation|keyboardHidden"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+
+        <service android:name="niranjan.sarthak.samarth.PreviewSMS" />
+
+        <activity
+            android:name="niranjan.sarthak.samarth.Maps"
+            android:label="@string/title_activity_maps" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.Sos"
+            android:label="@string/app_name"
+            android:launchMode="standard"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.DatabaseActivity"
+            android:label="@string/title_activity_database" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.SQLiteHelper"
+            android:label="@string/title_activity_sqlite_helper" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.PopUpActivity"
+            android:label="@string/title_activity_pop_up" >
+        </activity>
+        <activity
+            android:name="niranjan.sarthak.samarth.DirectionActivity"
+            android:label="@string/title_activity_direction" >
+        </activity>
+        <uses-library android:required="false" android:name="com.google.android.maps"/>
+    </application>
+
+</manifest>
